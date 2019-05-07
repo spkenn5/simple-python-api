@@ -23,6 +23,5 @@ if config.APP_ENV == 'dev' or config.APP_ENV == 'local':
     stream_handler.setFormatter(formatter)
     LOG.addHandler(stream_handler)
 
-
 def get_logger():
     return LOG

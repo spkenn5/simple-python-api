@@ -10,7 +10,6 @@ LOG = log.get_logger()
 
 class BaseModel(object):
     updated_at = Column(DateTime, default=func.now())
-    # modified = Column(DateTime, default=func.now(), onupdate=func.now())
 
     @declared_attr
     def __tablename__(self):

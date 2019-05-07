@@ -18,12 +18,6 @@ ERR_UNKNOWN = {
     'title': 'Unknown Error'
 }
 
-ERR_AUTH_REQUIRED = {
-    'status': falcon.HTTP_401,
-    'code': 99,
-    'title': 'Authentication Required'
-}
-
 ERR_INVALID_PARAMETER = {
     'status': falcon.HTTP_400,
     'code': 88,
@@ -42,17 +36,10 @@ ERR_NOT_SUPPORTED = {
     'title': 'Not Supported'
 }
 
-
 ERR_USER_NOT_EXISTS = {
     'status': falcon.HTTP_404,
     'code': 21,
     'title': 'User Not Exists'
-}
-
-ERR_PASSWORD_NOT_MATCH = {
-    'status': falcon.HTTP_400,
-    'code': 22,
-    'title': 'Password Not Match'
 }
 
 
@@ -113,16 +100,4 @@ class NotSupportedError(AppError):
 class UserNotExistsError(AppError):
     def __init__(self, description=None):
         super().__init__(ERR_USER_NOT_EXISTS)
-        self.error['description'] = description
-
-
-class PasswordNotMatch(AppError):
-    def __init__(self, description=None):
-        super().__init__(ERR_PASSWORD_NOT_MATCH)
-        self.error['description'] = description
-
-
-class UnauthorizedError(AppError):
-    def __init__(self, description=None):
-        super().__init__(ERR_AUTH_REQUIRED)
         self.error['description'] = description
