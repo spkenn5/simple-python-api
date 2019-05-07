@@ -1,2 +1,4 @@
 # simple-python-api
-simple python rest api with falcon
+
+To run the project
+`gunicorn app.main`
