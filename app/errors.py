@@ -6,7 +6,6 @@ try:
 except ImportError:
     OrderedDict = dict
 
-
 OK = {
     'status': falcon.HTTP_200,
     'code': 200,
@@ -41,7 +40,6 @@ ERR_USER_NOT_EXISTS = {
     'code': 21,
     'title': 'User Not Exists'
 }
-
 
 class AppError(Exception):
     def __init__(self, error=ERR_UNKNOWN, description=None):
