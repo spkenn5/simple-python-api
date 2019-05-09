@@ -2,8 +2,6 @@ import re
 import falcon
 
 from sqlalchemy.orm.exc import NoResultFound
-from cerberus import Validator
-
 from app import log
 from app.api.common import BaseResource
 import json

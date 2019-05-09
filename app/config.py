@@ -4,7 +4,7 @@ from itertools import chain
 
 BRAND_NAME = 'Falcon REST API Template'
 
-APP_ENV = os.environ.get('APP_ENV') or 'dev'  # or 'live' to load live
+APP_ENV = os.environ.get('APP_ENV') or 'dev'
 INI_FILE = os.path.join(
         os.path.dirname(os.path.realpath(__file__)),
         '../conf/{}.ini'.format(APP_ENV))
