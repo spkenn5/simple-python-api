@@ -19,7 +19,7 @@ Edit `dev.ini` in conf folder accordingly
 ```
 [postgres]
 host=localhost
-database=simple_python_api
+database=simple_python_api - dont change
 user=postgres
 password=postgres
 ```
